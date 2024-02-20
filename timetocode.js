@@ -105,8 +105,28 @@ else {
     console.log(`The factorial of ${number} is ${fact}.`);
 }
 }
-
 function prime(n) {
+
+    // Check if the number is equal to 1, which is not a prime number
+    if (n === 1) {
+      return false;
+    }
+    // Check if the number is equal to 2, which is a prime number
+    else if (n === 2) {
+      return true;
+    } else {
+      // Iterate from 2 to n-1 to check for factors of n
+      for (var i = 2; i < n; i++) {
+        // If n is divisible by i without a remainder, it is not a prime number
+        if (n % i === 0) {
+          return false;
+        }
+      } return true;
+      // If no factors are found, the number is a prime number
+      //return true;  
+    }
+}
+/*function prime(n)(faux) {
 
     // Check if the number is equal to 1, which is not a prime number
     if (n === 1) {
@@ -126,7 +146,8 @@ function prime(n) {
       // If no factors are found, the number is a prime number
       return true;  
     }
-}
+}*/
+
 
 /*/The Fibonacci sequence, also known as Fibonacci numbers, is defined as the sequence 
  of numbers in which each number in the sequence is equal to the sum of two numbers before it. 
